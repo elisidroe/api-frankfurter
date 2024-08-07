@@ -1,0 +1,30 @@
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+
+}
+
+.container{
+    background-color: rgba(128, 128, 128, 0.329);
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+h1{
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: black;
+
+}
+
+input{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 3px solid #8b8b8b9d;
+}
+

@@ -1,0 +1,24 @@
+Frankfurter es una API de datos de divisas gratuita y de código abierto que rastrea los tipos de cambio de referencia publicados por el Banco Central Europeo.
+
+api.frankfurter.appaloja una instancia pública de la API.
+
+Empezando
+Obtenga los últimos tipos de cambio.
+
+https://api.frankfurter.app/latest
+Obtenga tarifas para una fecha pasada.
+
+https://api.frankfurter.app/2000-01-03
+Obtenga tarifas por un período.
+
+https://api.frankfurter.app/2010-01-01..2010-01-31
+Para obtener más ejemplos, lea la documentación .
+
+Despliegue
+Puedes alojar tú mismo Frankfurter con Docker.
+
+docker run -d -p 8080:8080 \
+  -e "DATABASE_URL=<postgres_url>" \
+  --name frankfurter hakanensari/frankfurter
+  --name frankfurter hakanensari/frankfurter
+
