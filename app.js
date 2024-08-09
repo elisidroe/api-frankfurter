@@ -37,11 +37,11 @@ async function convertCurrency() {
 
     }
 
-    const response = await fetch (`https://api.frankfurter.app/latest?amount=${amount}&from{fromCurrency}to {toCurrency}`);
+    const response = await fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${fromCurrency}&to=${toCurrency}`);
     const data = await response.json();
     const result = data.rates[toCurrency];
 
-    document.getElementById('result').innerText = `${amount} ${fromCurrency} equals ${result} ${toCurrency}`;
+    document.getElementById('result').innerText = `${amount} ${fromCurrency} es igual a ${result} ${toCurrency}`;
 
 
 }
