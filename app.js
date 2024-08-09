@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const currencies = await response.json();
 
-    for (const [code, name] of Object.entries(currencies)){
+    for (const [code, name] of Object.entries(currencies)) {
         const optionFrom = document.createElement('option');
         optionFrom.value = code;
         optionFrom.textContent = `${name} (${code})`;
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function convertCurrency() { 
-    const amount = getElementById('amount').value;
-    const fromCurrency = getElementById('fromCurrency').value;
-    const toCurrency = getElementById('toCurrency').value;
+    const amount = document.getElementById('amount').value;
+    const fromCurrency = document.getElementById('fromCurrency').value;
+    const toCurrency = document.getElementById('toCurrency').value;
 
     if (amount === "" || isNaN(amount)){
         alert("Por favor ingresa una cantidad a convertir");
@@ -39,7 +39,7 @@ async function convertCurrency() {
 
     const response = await fetch (`https://api.frankfurter.app/latest?amount=${amount}&from{fromCurrency}to {toCurrency}`);
     const data = await response.json();
-    const result = data.ratest[toCurrency];
+    const result = data.rates[toCurrency];
 
     document.getElementById('result').innerText = `${amount} ${fromCurrency} equals ${result} ${toCurrency}`;
 
